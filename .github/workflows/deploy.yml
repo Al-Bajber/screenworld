@@ -20,4 +20,4 @@ jobs:
           server: ftp.screenworld.co.ke
           username: hgacwrnw
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /home/hgacwrnw/domains/screenworld.co.ke/public_html/
+          server-dir: domains/screenworld.co.ke/public_html/
