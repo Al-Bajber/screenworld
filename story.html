@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Screenworld - story</title>
+    <link href="./css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav>
+      <img src="images/logo.png" alt=""> 
+      <div id='links'>
+        <a href="./index.html">Home</a>
+        <a href="" class="active">Story</a>
+        <a href="./faqs.html">FAQS</a>
+        <a href="./contact.html">Contact</a>
+      </div>
+      <button class="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+    </nav>
+    <header class="intro">
+      <h1 class="hero">
+        <span>Screens that speak,</span>
+        <span>stories that tell</span>
+      </h1>
+      <img src="./images/businesspeople-meeting-office-working.jpg" alt="">
+    </header>
+    <section id="team">
+      <h2>Meet our <span>team</span></h2>
+      <div class="cards">
+        <div>
+          <img src="./images/people/senior-man-wearing-white-face-mask-covid-19-campaign-with-design-space.jpeg" alt="">
+          <div>
+            <h3>Maqbul</h3>
+            <div class="position">Production, VP</div>
+          </div>
+          <button type="" onclick="popup('john')">+</button>
+        </div>
+        <div>
+          <img src="./images/people/portrait-british-woman.jpeg" alt="">
+          <div>
+            <h3>Alwiya</h3>
+            <div class="position">Marketing</div>
+          </div>
+          <button type="" onclick="popup('jane')">+</button>
+        </div>
+        <div>
+          <img src="./images/people/beautiful-woman-face-portrait-brown-background.jpeg" alt="">
+          <div>
+            <h3>Ahmed</h3>
+            <div class="position">Designer</div>
+          </div>
+          <button type="" onclick="popup('najma')">+</button>
+        </div>
+      </div>
+      <div id="popup-fade">
+        <div class="popup john">
+          <div class="designation">
+            <h2>John doe</h2>
+            <h4>Production, VP</h4>
+          </div>
+          <button id="popup-close" type="" onclick="popdown()">
+            <img src="./images/icons/cancel-01-stroke-rounded.svg" alt="">
+          </button>
+          <div class="IMDB">
+            <div class="slogan">
+              Ensuring top-tier quality in every project
+            </div>
+            <div class="blah">
+              With over 20 years of experience, John has been instrumental in driving impactful and innovative solutions. For the past five years, he has led our operations, optimizing processes and refining strategies to ensure excellence and consistency in every project.
+            </div>
+          </div>
+        </div>
+        <div class="popup jane">
+        <div class="designation">
+          <h2>Jane Smith</h2>
+          <h4>Marketing</h4>
+        </div>
+        <button id="popup-close" type="" onclick="popdown()">
+          <img src="./images/icons/cancel-01-stroke-rounded.svg" alt="">
+        </button>
+        <div class="IMDB">
+          <div class="slogan">
+            Crafting strategies that make an impact
+          </div>
+          <div class="blah">
+            With a keen eye for trends and a deep understanding of audience engagement, Jane has spent the past decade refining strategies that drive meaningful results. Her expertise ensures every campaign is both innovative and effective.
+          </div>
+        </div>
+      </div>
+      <div class="popup najma">
+        <div class="designation">
+          <h2>Najma Ali</h2>
+          <h4>Designer</h4>
+        </div>
+        <button id="popup-close" type="" onclick="popdown()">
+          <img src="./images/icons/cancel-01-stroke-rounded.svg" alt="">
+        </button>
+        <div class="IMDB">
+          <div class="slogan">
+            Transforming ideas into visual excellence
+          </div>
+          <div class="blah">
+            With a passion for aesthetics and functionality, Najma has been at the forefront of creative innovation. She blends design and storytelling to create visuals that captivate and inspire.
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section id="testimonials">
+      <h2>Customers love <span>Screen</span>world</h2>
+      <div class="">
+        <button class="arrow left">
+          &larr;
+        </button>
+        <div id="testimonials-wrapper">
+          <div class="testimonial">
+            <p><span>"</span>Screenworld's screen trucks boosted our new meal promotions with incredible reach and visibility.<span>"</span></p>
+            <div class="profile">
+              <img src="./images/people/KFC_Logo_2006.png" alt="">
+              <div id="info">Branch manager, <span>KFC Mombasa</span></div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p><span>"</span>ScreenWorld transformed our brand with creativity and precision, exceeding expectations with outstanding results!<span>"</span></p>
+            <div class="profile">
+              <img src="./images/people/dola logo.png" alt="">
+              <div id="info">Regional salesperson, <span>Dola</span></div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p><span>"</span>ScreenWorld’s innovative approach helped us engage more effectively with our audience, making our campaigns more impactful.<span>"</span></p>
+            <div class="profile">
+              <img src="./images/people/logo-absa.jpg" alt="">
+              <div id="info">Promotions team, <span>Absa</span></div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p><span>"</span>Thanks to ScreenWorld’s strategic campaigns, our product launches reached new heights, capturing attention and driving results.<span>"</span></p>
+            <div class="profile">
+              <img src="./images/people/tecno.png" alt="">
+              <div id="info">Marketing director, <span>Tecno</span></div>
+            </div>
+          </div>
+        </div>
+        <button class="arrow right">
+          &rarr;
+        </button>
+      </div>
+      <ul>
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </section>
+    <aside>
+      <a href="./index.html"><img src="images/icons/home-12-stroke-rounded.svg" alt="">Home</a>
+      <a href="./story.html"><img src="images/icons/clock-04-stroke-rounded.svg" alt="">Story</a>
+      <a href="./faqs.html"><img src="images/icons/user-question-01-stroke-rounded.svg" alt="">FAQS</a>
+      <a href="./contact.html"><img src="images/icons/contact-02-stroke-rounded.svg" alt="">Contact</a>
+    </aside>
+    <footer>
+       <div class="column">
+        <h1>
+          <button type="">Screen</button>
+          <span>world</span>
+        </h1>
+        <div id="copy">
+          Copyright &copy 2025 Screenworld
+        </div>
+       </div>
+       <div class="column sitemap">
+        <h2>Sitemap</h2>
+        <ul>
+          <li><a href="./story.html">Story</li></a>
+          <li><a href="./contact.html">Contact</li></a>
+          <li><a href="./">Privacy policy</li></a>
+          <li><a href="./">Services</li></a>
+          <li><a href="./faqs.html">FAQs</li></a>
+        </ul>
+       </div>
+       <div class="column socials">
+        <h2>Social</h2>
+        <a href=""><img src="./images/icons/new-twitter-stroke-rounded.svg" alt=""></a>
+        <a href="https://wa.me/254723118071?text=Hello%2C%20I%20am%20interested%20in%20ScreenWorld's%20advertising%20services."><img src="./images/icons/whatsapp-stroke-rounded.svg" alt=""></a>
+        <a href="https://www.instagram.com/_screenworld_?igsh=MWI3ZGwwZWZ4a3I0Zg=="><img src="./images/icons/instagram-stroke-rounded.svg" alt=""></a>
+        <a href="https://www.tiktok.com/@_screenworld_?is_from_webapp=1&sender_device=pc"><img src="./images/icons/tiktok-stroke-rounded.svg" alt=""></a>
+        <a href=""><img src="./images/icons/facebook-02-stroke-rounded.svg" alt=""></a>
+       </div>
+     </footer>
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
