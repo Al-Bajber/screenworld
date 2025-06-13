@@ -1,0 +1,23 @@
+name: 🚀 Deploy to DirectAdmin Hosting via FTP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  ftp-deploy:
+    name: Upload to screenworld.co.ke
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v3
+
+      - name: 📤 FTP Upload
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ftp.screenworld.co.ke
+          username: hgacwrnw
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /home/hgacwrnw/domains/screenworld.co.ke/public_html/
