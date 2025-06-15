@@ -84,12 +84,22 @@ nav img{
 .hero {
   width: 50%;
   background: var(--teal);
-  height: 400px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-size: 50px;
   padding-left: 25px;
+}
+@media (max-width: 718px) {
+  .hero {
+    font-size: 35px;
+  }
+}
+@media (max-width: 369px) {
+  #team h2{
+    padding-left: 15px;
+  }
 }
 .hero span {
   color: var(--light);
@@ -98,13 +108,13 @@ nav img{
   color: var(--dark);
 }.intro {
   display: flex;
-  height: 450px;
+  height: fit-content;
   justify-content: center;
   align-items: center;
   background: var(--teal);
 }
 .intro img{
-  height: 100%;
+  height: auto;
   width: 50%;
 }
 .solo {
@@ -171,21 +181,18 @@ footer h2, footer h1{
   height: 40px;
   width: 240px;
   display: inline-block;
-  line-height: 37px;
+  line-height: 40px;
   text-align: center;
-  color: var(--dark);
-  background: none;
+  color: var(--light);
+  background: var(--dark);
   font-size: 18px;
-  border: 2px solid var(--dark);
   text-transform: uppercase;
   cursor: pointer;
   margin: 20px 0;
-  transition: background 1s ease;
   transition: color 1s ease;
 }
 #stamp a:hover {
-  background: var(--dark);
-  color: var(--light);
+  color: var(--teal);
 }
 footer h1 :nth-child(1) {
   color: var(--secondary);
@@ -285,7 +292,6 @@ footer .sitemap ul{
 .card {
   width: 350px;
   height: 420px;
-  position: relative;
   border-radius: 15px;
   overflow: hidden;
   background: #eee;
@@ -363,11 +369,13 @@ footer .sitemap ul{
   width: 100%;
   height: 220px;
 }
-#team .cards > div:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 1rem 3rem #0000004C;
-  width: 360px;
-  height: 180px;
+@media (min-width: 577px) {
+  #team .cards > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem #0000004C;
+    width: 360px;
+    height: 180px;
+  }
 }
 #team .cards > div {
   width: 350px;
@@ -381,8 +389,10 @@ footer .sitemap ul{
 }
 #team .cards img {
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
+  height: 55px;
+  width: auto;
+  border: 1px solid var(--dark);
+  padding: 5px;
 }
 #team h2{
   color: var(--dark);
@@ -414,7 +424,7 @@ footer .sitemap ul{
 #testimonials .profile{
   display: flex;
   width: 320px;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   margin: 10px;
 }
@@ -425,8 +435,9 @@ footer .sitemap ul{
   font-size: 30px;
   color: var(--secondary);
   font-weight: 10;
-  width: 570px;
+  width: 100%;
   font-style: italic;
+  text-align: center;
 }
 #testimonials ul{
   list-style-type:none;
@@ -434,6 +445,7 @@ footer .sitemap ul{
   width: 570px;
   height: 3px;
   align-items: center;
+  margin-top: -50px;
 }
 #testimonials ul li{
   width: 25%;
@@ -472,10 +484,14 @@ footer .sitemap ul{
   padding: 0 20px;
   transition: transform 0.3s ease;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   /* transform: translatex(-1200px); */
 }
 #testimonials-wrapper {
-  width: 600px;
+  width: 100%;
   overflow: hidden;
   display: flex;
   transition: transform 0.4s ease;
@@ -605,7 +621,11 @@ main {
   cursor: pointer;
   justify-content: space-between;
   padding: 15px 0;
-
+}
+#geo{
+  width: 100%;
+  height: auto;
+  min-height: 250px;
 }
 main h2 {
   font-size: 35px;
@@ -648,12 +668,20 @@ main h4{
   backdrop-filter: blur(5px);
   z-index: 1000;
   border-radius: 12px;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  display: none;
+  opacity: 0;
+  position: absolute;
+  top:5%;
+  transform: scale(0);
+  transition: all 0.4s ease;
+}
+.popup.show{
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.4s ease;
 }
 .popup button {
   all: unset;
@@ -840,7 +868,7 @@ aside a:hover{
   }
   #cards{
     flex-direction: column;
-    height: 820px;
+    height: 1450px;
   }
   #content p span {
     display: none;
@@ -849,16 +877,17 @@ aside a:hover{
     height:680px;
   }
   .trapezoid:nth-child(3){
-    height: 800px;
+    height: 900px;
+    margin-top: -90px;
   }
   .card{
-    height: 250px;
-    width: 250px;
+    height: 400px;
+    width: 350px;
     margin: 10px 0;
   }
   .card img{
-    width: 250px;
-    height: 250px;
+    width: 100%;
+    height: auto;
   }
   #team{
     height: fit-content;
@@ -883,16 +912,19 @@ aside a:hover{
   .intro {
     height: fit-content;
     padding: 25px 0;
+    flex-direction: column;
+    padding: 0;
   }
-  .intro h1{
+  .intro h1, .solo{
     font-size: 42px;
+    min-height: 200px;
+  }
+  .intro img{
+    width: 100%;
   }
   .hero {
     width: 100%;
     height: fit-content;
-  }
-  .intro img {
-    display: none;
   }
   html {
     height: fit-content;
@@ -903,20 +935,53 @@ aside a:hover{
   .faq-item{
     width: 100%;
   }
-  .trapezoid:nth-child(3){
-    margin-top: -80px;
-  }
   .trapezoid:nth-child(4) {
-    height: 970px;
+    height: 1550px;
+    padding: 90px 0;
+    margin-top: -90px;
   }
   .card-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #fefefe15;
-    backdrop-filter: blur(3px);
+    height: 70px;
     width: 100%;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+  }
+  .third h2{
+    margin: 35px 5px;
+  }
+  .popup .IMDB{
+    padding: 15px;
+  }
+  .popup .slogan {
+    font-size: 18px;
+  }
+  .popup .blah {
+    font-size: 16px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup .designation{
+    padding: 50px 10px;
+  }
+  .popup{
+    height: fit-content;
+    width: 85%;
+    top:20%;
+  }
+  #testimonials .testimonial p{
+    font-size: 20px;
+  }
+  #testimonials h2 {
+    font-size: 35px;
+    padding: 15px;
+  }
+  .popup button{
+    top: 5%;
+    left: 85%;
+  }
+  #testimonials  {
+    height: 450px;
   }
 }

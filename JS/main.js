@@ -105,23 +105,21 @@ const popups = document.getElementsByClassName("popup")
 function popup(name) {
   popupfade.style.display = "flex"
   document.body.style.overflow = "hidden"
-  if(name == "john") {
-    popups[0].style.display="flex"
-    popups[0].style.height = "550px"
-  } else if(name=="jane") {
-    popups[1].style.display="flex"
-    popups[1].style.height = "550px"
-  } else if (name == "najma") {
-    popups[2].style.display = "flex"
-    popups[2].style.height = "550px"
-  }
+  setTimeout(() => {
+    if(name == "maqbul") {
+      popups[0].classList.add("show")
+    } else if(name=="alwiya") {
+      popups[1].classList.add("show")
+    } else if (name == "adnan") {
+      popups[2].classList.add("show")
+    }
+  }, 10)
 }
 function popdown() {
   popupfade.style.display = "none"
   document.body.style.overflow ="auto"
   for (let i = 0; i < popups.length; i++) {
-    popups[i].style.display= "none"
-    popups[i].style.height = "0px"
+    popups[i].classList.remove("show")
   }
 }
 
