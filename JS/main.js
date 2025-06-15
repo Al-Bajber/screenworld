@@ -22,6 +22,20 @@ document.querySelectorAll("a").forEach(link => {
   });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Wait until images + assets are also loaded
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+      loader.style.display = "none";
+      document.body.classList.remove("preload");
+      document.body.classList.add("ready");
+    }, 400); // match transition time
+  });
+});
+
 //FAQ's Handling
 document.querySelectorAll('.faq-item button').forEach(button => {
   button.addEventListener('click', () => {

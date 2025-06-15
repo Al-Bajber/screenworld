@@ -13,7 +13,7 @@ const slides = [
     bg: "../images/slideshow/two-partners.jpeg",
   },
   {
-    title: "Strategic Advertising",
+    title: "Strategic Ads",
     text: "ScreenWorld crafts high-impact campaigns, blending innovation with precision to connect brands with their audience.",
     button: "Explore our services",
     bg: "../images/slideshow/team-meeting-renewable-energy-project.jpeg",
