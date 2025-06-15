@@ -11,6 +11,17 @@ document.body.classList.add("loading");
     }, 500);
   });
 
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", (e) => {
+    showLoader();
+
+    // optionally, simulate loading or wait for AJAX / navigation
+    setTimeout(() => {
+      hideLoader();
+    }, 1000);
+  });
+});
+
 //FAQ's Handling
 document.querySelectorAll('.faq-item button').forEach(button => {
   button.addEventListener('click', () => {
