@@ -133,6 +133,7 @@ nav img{
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  transition: all 0.8s ease-in-out;
 }
 #buttons button {
   height: 30px;
